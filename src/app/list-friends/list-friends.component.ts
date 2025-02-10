@@ -1,25 +1,21 @@
 import { Component } from '@angular/core';
-
+import { OneFriendComponent } from '../one-friend/one-friend.component';
 @Component({
   selector: 'app-list-friends',
-  imports: [],
+  imports: [OneFriendComponent],
   templateUrl: './list-friends.component.html',
   styleUrl: './list-friends.component.css'
 })
 export class ListFriendsComponent {
+ listfriends:boolean =false;
 
-  Utilisateur: string = `Steven Cigale`;
-  Age: number = 25;
-  Status: string =`Offline`;
-  Bio: string = 'Steven cigale is a French Film producer, screenwriter and director. He is best known for his work in the 2000s and 2010s';
-  currentDate: Date = new Date();
-  passion: string[] = ['Volébol', 'Gun', 'Guitare'];
-  Xss: string = `<script>alert("Hello, XSS H4CK3D !")</script>`;
-  // Condition ternaire : 
-   Reputation: string =`Ringard`;
-  ResultReputation:string =  this.Reputation ? 'Ringard': 'Cool';
-  // Méthode appelée dans le template
-  getAge(): number {
-    return 25;
-  }
+//  constructor(){
+//   setTimeout(()=>{
+//     this.listfriends=true;},3000);
+//   }
+dataInput:any = '';
+ capterEvent($event:Event){
+   this.dataInput+= $event.target;
+  return (this.dataInput.target.value)
 }
+ }
