@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class  OneFriendComponent {
 
   Utilisateur: string = `Steven Cigale`;
+  photo: string = `https://thispersondoesnotexist.com/`;
+  uneData:string = `https://thispersondoesnotexist.com/`;
   Age: number = 25;
   Status: string =`Offline`;
   Bio: string = 'Steven cigale is a French Film producer, screenwriter and director. He is best known for his work in the 2000s and 2010s';
