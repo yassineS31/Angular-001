@@ -13,9 +13,20 @@ export class ListFriendsComponent {
 //   setTimeout(()=>{
 //     this.listfriends=true;},3000);
 //   }
-dataInput:any = '';
- capterEvent($event:Event){
-   this.dataInput+= $event.target;
-  return (this.dataInput.target.value)
+dataInput:string = '';
+ capterEvent($event:any){
+  this.dataInput=$event.target.value;
+  return this.dataInput;
+
 }
+
+message:string = "";
+
+ajouterAmi(){
+  this.message ="Utilisateur ajouté avec succès"
+  return this.message;
+}
+
  }
+
+ 
