@@ -21,24 +21,16 @@ export class  OneFriendComponent implements OnInit {
   // Condition ternaire : 
    Reputation: string =`Ringard`;
   ResultReputation:string =  this.Reputation ? 'Ringard': 'Cool';
-  oneFriendStyle:any = "";
+  oneFriendStyle: string = Math.random() > 0.5 ? "ON" : "OFF";
   // Constructor
   color1:string="brown";
   color2:string="blue";
 
 
+getColor(): string {
+  return this.oneFriendStyle === "ON" ? "amiOn" : "amiOff";
+}
 
-  getColor():any{
-    if(Math.random()>0.5){
-      this.oneFriendStyle= "ON";
-      console.log("ON")
-      return "amiOn"
-    }else {
-      console.log("OFF")
-      return "amiOff"
-
-    }
-  }
 
   changeBg(){
     if(this.oneFriendStyle=="ON"){
@@ -52,6 +44,8 @@ export class  OneFriendComponent implements OnInit {
   getAge(): number {
     return 25;
   }
+
+
 
 
   ngOnInit() {
