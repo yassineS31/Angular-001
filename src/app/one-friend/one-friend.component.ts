@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-
+import { NgClass } from '@angular/common';
+import { NgStyle } from '@angular/common';
 @Component({
   selector: 'app-one-friend',
-  imports: [],
+  imports: [NgClass,NgStyle],
   templateUrl: './one-friend.component.html',
   styleUrl: './one-friend.component.css'
 })
@@ -20,6 +21,30 @@ export class  OneFriendComponent {
   // Condition ternaire : 
    Reputation: string =`Ringard`;
   ResultReputation:string =  this.Reputation ? 'Ringard': 'Cool';
+  oneFriendStyle:string = "OFF";
+  // Constructor
+  color1:string="brown";
+  color2:string="blue";
+  getColor():any{
+    if(Math.random()>0.5){
+      this.oneFriendStyle= "ON";
+      console.log("ON")
+      return "amiOn"
+    }else {
+      console.log("OFF")
+      return "amiOff"
+
+    }
+  }
+
+  changeBg(){
+    if(this.oneFriendStyle=="ON"){
+      return this.color1
+    }else {
+      return this.color2
+    }
+  }
+
   // Méthode appelée dans le template
   getAge(): number {
     return 25;
