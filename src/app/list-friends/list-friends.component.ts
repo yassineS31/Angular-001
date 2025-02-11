@@ -16,15 +16,22 @@ export class ListFriendsComponent {
 dataInput:string = '';
  capterEvent($event:any){
   this.dataInput=$event.target.value;
-  return this.dataInput;
-
 }
+
+/*   
+Version avec HTMLInputElement :
+
+ capterEvent($event:HTMLInputElement){
+  this.dataInput=$event.value;
+}
+
+*/
 
 message:string = "";
 
 ajouterAmi(){
   this.message ="Utilisateur ajouté avec succès"
-  return this.message;
+  
 }
 
  }
