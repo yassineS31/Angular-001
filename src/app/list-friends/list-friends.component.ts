@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { OneFriendComponent } from '../one-friend/one-friend.component';
-import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-list-friends',
-  imports: [OneFriendComponent,CommonModule],
+  imports: [OneFriendComponent,NgIf],
   templateUrl: './list-friends.component.html',
   styleUrl: './list-friends.component.css'
 })
