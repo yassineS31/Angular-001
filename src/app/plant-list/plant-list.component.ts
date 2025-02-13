@@ -29,9 +29,9 @@ export class PlantListComponent {
 
   loadPlants(): void {
     this.Plantservice.fetchPlantList()
-      .then((hkj) => {
-         console.log(hkj);
-        this.plants = hkj.data.map((plant: any) => ({
+      .then((responseapi) => {
+         console.log(responseapi);
+        this.plants = responseapi.data.map((plant: any) => ({
           id: plant.id,
           name: plant.scientific_name, // Utilisation du nom scientifique car common_name est souvent null
           image: plant.image_url, // Image temporaire
